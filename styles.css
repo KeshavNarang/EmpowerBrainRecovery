@@ -1,0 +1,342 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: #0e76a8;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    position: relative;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: #00a4e4;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    color: white;
+    padding: 100px 20px;
+    text-align: left;
+    overflow: hidden; /* Combined with position: relative */
+    max-width: 1200px; /* Set max-width to match other sections */
+    margin: 20px auto 0 auto; /* Add margin-top to move it below the nav bar */
+    border-radius: 15px; /* Round corners of the hero section */
+    height: 250px;
+}
+
+.hero-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero h1 {
+    text-align: center;
+}
+
+/* Semi-transparent blue mask */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* mask */
+    z-index: 0;
+}
+
+/* Semi-transparent blue mask */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* mask */
+    z-index: 0;
+}
+
+/* Text styling */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    margin-top: -90px; /* Adjusted to move the text up */
+    margin-bottom: -70px; /* Adjusted to move the text up */
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Large heading */
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem; /* Adjusted subheading */
+    margin-bottom: 5px;
+}
+
+.hero-content p {
+    font-size: 1.2rem; /* Larger paragraph text */
+    margin-bottom: 10px;
+}
+
+.hero-content h1, .hero-content h2, .hero-content p {
+    color: #ffffff; /* Apply dark blue text color to all text */
+}
+
+
+/* Section Styling */
+section {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 40px;
+    border-radius: 15px; /* Round corners of the hero section */
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Mission Section */
+#mission .mission-content {
+    display: flex; /* Use flexbox to align text and image side by side */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    gap: 20px; /* Add space between text and image */
+    max-width: 900px; /* Optional: control max width for better readability */
+    margin: 0 auto; /* Optional: keep content centered but not fully */
+}
+
+#mission .mission-content p {
+    text-align: left; /* Left-align the text */
+}
+
+#mission .mission-content img {
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 150px; /* Adjust the max height to match text height */
+    border-radius: 10px;
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 40px 20px;
+}
+
+/* Section Border */
+.section-border {
+    border-bottom: 2px solid #ccc;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    flex: 1 1 calc(30% - 20px);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+#initiatives-list {
+    padding: 0px 100px;
+    text-align: left;
+}
+
+/* Impact */
+.impact-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: #0e76a8;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: auto;
+}
+
+/* Partners Section */
+.partners-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.partner-logo img {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Get Involved Section */
+.get-involved-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.get-involved-item {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 20px);
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #00a4e4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .card {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Alternating Section Colors */
+section:nth-child(even) {
+    background-color: #ffffff; /* Light blue */
+}
+
+section:nth-child(odd) {
+    background-color: #d4e7fa;
+    /* background-color: #d2e1ed; */ /* White */
+}
+```
+<script src="script.js"></script>
