@@ -64,84 +64,148 @@ body {
     margin: 0 10px;
 }
 
+
+/* Combined Hero and Mission Section */
+#hero-mission {
+    display: flex;
+    max-height: 60vh;  /* Full viewport height */
+    align-items: flex-start;  /* Align to top of the container */
+}
+
+.hero-mission-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;  /* Align both sections to the top */
+    padding: 20px;
+}
+
 /* Hero Section */
 .hero {
-    position: relative;
-    color: white;
-    padding: 100px 20px;
-    text-align: left;
-    overflow: hidden; /* Combined with position: relative */
-    max-width: 1200px; /* Set max-width to match other sections */
-    margin: 20px auto 0 auto; /* Add margin-top to move it below the nav bar */
-    border-radius: 15px; /* Round corners of the hero section */
-    height: 250px;
+    display: flex;
+    flex-direction: column; /* Ensure the content stacks vertically */
+    justify-content: flex-start; /* Align the content to the top */
+    align-items: center; /* Center-align the image and text */
+    padding: 20px;
+    overflow: hidden; /* Prevent any overflow from the container */
 }
 
-.hero-video video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+.hero-content img {
+    margin-top: -60px; /* Adjust the image position to overlap the container */
+    max-width: 100%;  /* Make sure the image doesn't exceed the container's width */
+    max-height: 100%; /* Prevent the image from exceeding the container's height */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    height: auto; /* Adjust the height automatically to preserve aspect ratio */
+    border-radius: 10px; /* Optional: Add rounding for consistency with the container */
 }
 
-.hero h1 {
-    text-align: center;
-}
-
-/* Semi-transparent blue mask */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* mask */
-    z-index: 0;
-}
-
-/* Semi-transparent blue mask */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* mask */
-    z-index: 0;
-}
-
-/* Text styling */
+/*
 .hero-content {
-    position: relative;
-    z-index: 1;
-    margin-top: -90px; /* Adjusted to move the text up */
-    margin-bottom: -70px; /* Adjusted to move the text up */
+    text-align: left;
 }
 
 .hero-content h1 {
-    font-size: 4rem; /* Large heading */
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .hero-content h2 {
-    font-size: 1.5rem; /* Adjusted subheading */
-    margin-bottom: 5px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
-.hero-content p {
-    font-size: 1.2rem; /* Larger paragraph text */
-    margin-bottom: 10px;
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+*/
+
+/* Mission Section */
+.mission {
+    flex: 1;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Align content to the top */
+    text-align: left;
 }
 
-.hero-content h1, .hero-content h2, .hero-content p {
-    color: #ffffff; /* Apply dark blue text color to all text */
+.mission h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+.mission p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#hero-mission {
+    display: flex;
+    flex-wrap: wrap; /* Allow children to stack vertically when necessary */
+    max-height: 60vh; /* Full viewport height */
+    align-items: flex-start; /* Align to the top of the container */
+    overflow: hidden; /* Prevent overflow */
+}
+
+@media (max-width: 768px) {
+    #hero-mission {
+        flex-direction: column; /* Stack sections vertically */
+        max-height: none; /* Allow full height for stacking */
+    }
+
+    .hero, .mission {
+        flex: none; /* Disable flex-grow */
+        width: 100%; /* Ensure each section takes full width */
+        margin-bottom: 20px; /* Add spacing between sections */
+    }
+}
+
+
+/* Responsive Design */
+/*
+@media (max-width: 768px) {
+    #hero-mission {
+        flex-direction: column;
+    }
+
+    .hero, .mission {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .mission h2 {
+        font-size: 1.5rem;
+    }
+
+    .mission p {
+        font-size: 1rem;
+    }
+
+    .mission img {
+        max-width: 100%;
+    }
+}
+*/
 
 /* Section Styling */
 section {
@@ -156,25 +220,6 @@ section {
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-}
-
-/* Mission Section */
-#mission .mission-content {
-    display: flex; /* Use flexbox to align text and image side by side */
-    align-items: flex-start; /* Align items to the start of the flex container */
-    gap: 20px; /* Add space between text and image */
-    max-width: 900px; /* Optional: control max width for better readability */
-    margin: 0 auto; /* Optional: keep content centered but not fully */
-}
-
-#mission .mission-content p {
-    text-align: left; /* Left-align the text */
-}
-
-#mission .mission-content img {
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 150px; /* Adjust the max height to match text height */
-    border-radius: 10px;
 }
 
 /* Section Padding */
@@ -193,6 +238,25 @@ section h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+}
+
+#guide {
+    padding: 20px 100px;
+}
+#guide ul {
+    text-align: left;
+}
+
+#long {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    flex: 1 1 calc(30% - 20px);
+    text-align: center;
+    transition: transform 0.3s;
+    margin-bottom: 20px;
 }
 
 .card {
@@ -243,7 +307,7 @@ section h2 {
 }
 
 .partner-logo img {
-    max-height: 100px;
+    max-height: 200px;
     object-fit: contain;
 }
 

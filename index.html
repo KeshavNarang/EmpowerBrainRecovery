@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="""en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <ul>
+        <ul class="nav-links" id="nav-links">
             <li><a href="#hero">Home</a></li>
             <li><a href="#mission">Mission</a></li>
             <li><a href="#services">What We Offer</a></li>
@@ -19,9 +19,36 @@
             <li><a href="#get-involved">Get Involved</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="hamburger" id="hamburger">&#9776;</button>
     </nav>
 
+    <!-- Combined Hero and Mission Section -->
+    <section id="hero-mission" class="section-padding">
+        <div class="hero-mission-container">
+            <!-- Hero Section -->
+            <div class="hero">
+                <div class="hero-content">
+                    <!--
+                    <h1 class="header-title"> Empower Brain Recovery </h1>
+                    <h2>Empowering Brain Recovery, One Step at a Time</h2>
+                    <p class="hero-subtitle">Our mission is to empower individuals with brain injuries through education, community support, and research-driven interventions.</p>
+                    -->
+                    <img src = "ETBF.png" alt="Brain Injury Recovery" class="hero-image">
+                </div>
+            </div>
+
+            <!-- Mission Section -->
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>We are an initiative dedicated to supporting individuals affected by Traumatic Brain Injuries (TBI). Our mission is to bridge gaps in care through community engagement, personalized rehabilitation, and academic and career support. We focus on community reintegration, life skills development, and raising awareness about the challenges faced by TBI survivors. By fostering collaboration and providing tailored resources, we strive to empower survivors to rebuild their lives with confidence and hope.</p>
+            </div>
+        </div>
+    </section>
+
+
+
     <!-- Hero Section -->
+     <!--
     <header class="hero" id="hero">
         <div class="hero-video">
             <video autoplay loop muted>
@@ -34,25 +61,19 @@
             <h2> Empowering Brain Recovery, One Step at a Time</h2>
             <p> Our mission is to empower individuals with 
                 brain injuries through education, community support, and research-driven interventions. </p>
-            <!--
-            <p>Our mission is to bridge critical gaps in care through peer-led support, rehabilitation services, and community integration.</p>
-            -->
         </div>
     </header>
 
-    <!-- Mission Section -->
     <section id="mission" class="section-padding section-border">
         <h2>Our Mission</h2>
         <div class="mission-content">
             <p>
                 EmpowerBrainRecovery is an initiative dedicated to supporting individuals affected by Traumatic Brain Injuries (TBI). Our mission is to bridge gaps in care through community engagement, personalized rehabilitation, and academic and career support. We focus on community reintegration, life skills development, and raising awareness about the challenges faced by TBI survivors. By fostering collaboration and providing tailored resources, we strive to empower survivors to rebuild their lives with confidence and hope.
             </p>
-            <!--
-            <p>EmpowerBrainRecovery is a student-led initiative dedicated to transforming the lives of young adults and individuals affected by brain injuries, including Traumatic Brain Injuries (TBI) and Acquired Brain Injuries (ABI). We aim to empower individuals with personalized rehabilitation, academic and career support, and community reintegration. We are committed to delivering holistic, patient-centered care, advocating for equitable policies, and raising awareness about the challenges faced by those with ABI and TBI.</p>
-            -->
             <img src="ETR_Logo.png" alt="Brain Injury Recovery" class="mission-image">
         </div>
     </section>
+    -->
 
     <!-- Services Section -->
     <section id="services" class="section-padding section-border">
@@ -83,9 +104,68 @@
                 <p>Workshops on budgeting, independent living, and day-to-day management to empower survivors to build confidence and independence.</p>
             </div>
         </div>
+        <br>
+        <h2> Coming Soon! </h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>TBI Survivor Support Groups</h3>
+                <p>Weekly support meetings!</p>
+            </div>
+            <div class="card">
+                <h3>Teen Brain Health Workshops</h3>
+                <p>Hands-on learning events!</p>                    .</p>
+            </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="guide" class="section-padding section-border">
+        <h2>Guide: Living with TBI and ABI</h2>
+        <p>Your essential resource for navigating life after a brain injury.</p>
+
+        <div class="card" id="long">
+        <h3>What are TBI and ABI?</h3>
+        <ul>
+            <li>Traumatic Brain Injury (TBI) is a disruption in normal brain function caused by an external impact, such as a fall, accident, or sports injury.</li>
+            <li>Acquired Brain Injury (ABI) refers to any brain damage that occurs after birth due to internal causes, such as stroke, infection, or lack of oxygen.</li>
+            <li>Both TBI and ABI can range from mild to severe, requiring long-term care and recovery strategies. Understanding these conditions is the first step toward managing their effects and planning for recovery.</li>
+        </ul>
+        </div>
+
+        <div class="card" id="long">
+        <h3>Tips for Living with TBI and ABI</h3>
+        <ul>
+            <li><strong>Set Realistic Goals:</strong> Break down tasks into manageable steps and celebrate small achievements.</li>
+            <li><strong>Maintain a Routine:</strong> Establishing a structured daily schedule can help with memory and focus.</li>
+            <li><strong>Engage in Therapy:</strong> Participate in physical, occupational, and cognitive therapies to regain strength and skills.</li>
+            <li><strong>Stay Connected:</strong> Build a support system of family, friends, and support groups to reduce feelings of isolation.</li>
+            <li><strong>Practice Self-Care:</strong> Ensure adequate sleep, nutrition, and mindfulness practices to promote healing.</li>
+        </ul>
+        </div>
+
+        <div class="card" id="long">
+        <h3>Rehabilitation Resources</h3>
+        <p>Recovery after TBI or ABI is a journey. Access specialized rehabilitation programs, including:</p>
+        <ul>
+            <li><strong>Cognitive Rehabilitation:</strong> Exercises to improve memory, attention, and problem-solving skills.</li>
+            <li><strong>Speech Therapy:</strong> For individuals facing communication challenges.</li>
+            <li><strong>Physical Therapy:</strong> Tailored exercises to regain strength, balance, and mobility.</li>
+            <li><strong>Emotional Support:</strong> Counseling and mental health resources to manage anxiety or depression.</li>
+        </ul>
+        </div>
+
+        <div class="card" id="long">
+        <h3>Support Networks</h3>
+        <p>Navigating recovery is easier with the right support:</p>
+        <ul>
+            <li><strong>Peer Groups:</strong> Connect with others who have faced similar challenges for shared advice and encouragement.</li>
+            <li><strong>Caregiver Support:</strong> Equip family members and caregivers with the tools to provide effective assistance.</li>
+            <li><strong>Online Communities:</strong> Access forums and virtual groups dedicated to TBI and ABI survivors and their families.</li>
+        </ul>
+        </div>
     </section>
 
     <!-- Initiatives Section -->
+    <!--
     <section id="initiatives" class="section-padding section-border">
         <h2>Our Initiatives</h2>
         <ul id="initiatives-list">
@@ -93,6 +173,7 @@
             <li> <b> Adolescent Brain Health Workshops: </b> Hands-on learning events. </li>
         </ul>
     </section>
+    -->
 
     <!-- Impact Section -->
     <!--
@@ -120,16 +201,16 @@
         <h2>Our Partners</h2>
         <div class="partners-container">
             <div class="partner-logo">
-                <img src="penn-logo.png" alt="Penn Medicine">
-            </div>
-            <div class="partner-logo">
                 <img src="stanford-logo.png" alt="Stanford Medicine">
             </div>
             <div class="partner-logo">
-                <img src="Got_ABI.jpeg" alt="ABI">
+                <img src="penn-logo.png" alt="Penn Medicine">
             </div>
             <div class="partner-logo">
-                <img src="MYB.jpeg" alt="MYB">
+                <img src="MYB.png" alt="MYB">
+            </div>
+            <div class="partner-logo">
+                <img src="Got_ABI.png" alt="ABI">
             </div>
         </div>
     </section>
