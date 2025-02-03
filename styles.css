@@ -70,6 +70,7 @@ body {
     display: flex;
     max-height: 60vh;  /* Full viewport height */
     align-items: flex-start;  /* Align to top of the container */
+    background-color: #d4e7fa;
 }
 
 .hero-mission-container {
@@ -78,6 +79,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;  /* Align both sections to the top */
     padding: 20px;
+    background-color: #d4e7fa;
 }
 
 /* Hero Section */
@@ -88,6 +90,7 @@ body {
     align-items: center; /* Center-align the image and text */
     padding: 20px;
     overflow: hidden; /* Prevent any overflow from the container */
+    background-color: #d4e7fa;
 }
 
 .hero-content img {
